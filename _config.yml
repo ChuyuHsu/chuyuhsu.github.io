@@ -2,7 +2,7 @@
 
 title:            HUMAN ENSEMBLING
 locale:           en_US
-url:              "http://127.0.0.1" 
+url:              "http://127.0.0.1:4000" 
 
 # Octopress
 # Default extension for new posts and pages
