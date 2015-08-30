@@ -1,9 +1,9 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
-tags: [Jekyll, theme, responsive, blog, template]
+excerpt: "Machine learning, data mining and software engineering"
+tags: [blog, machine learning, data mining]
 image:
-  feature: sample-image-1.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: livecrowd.jpg
+  credit: 
+  creditlink: 
 ---
