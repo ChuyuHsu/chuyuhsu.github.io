@@ -4,6 +4,10 @@ title:            HUMAN ENSEMBLING
 locale:           en_US
 url:
 
+# Octopress
+# Default extension for new posts and pages
+post_ext: md
+page_ext: html
 
 # Jekyll configuration
 
