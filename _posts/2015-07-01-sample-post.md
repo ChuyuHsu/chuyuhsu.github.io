@@ -44,6 +44,7 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
 
+
 # List Types
 
 ## Ordered Lists
@@ -118,7 +119,17 @@ Make any link standout more when applying the `.btn` class.
 <div markdown="0"><a href="#" class="btn btn-danger">Danger Button</a></div>
 <div markdown="0"><a href="#" class="btn btn-info">Info Button</a></div>
 
+
 # Notices
 
 **Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
 {: .notice}
+
+# Footnotes
+
+Clicking this number[^fn-sample_footnote] will lead you to a footnote.
+
+[^fn-sample_footnote]: Handy! Now click the return link to go back.
+
+
+
