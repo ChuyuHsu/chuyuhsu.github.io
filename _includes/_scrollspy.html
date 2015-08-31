@@ -5,48 +5,6 @@
 .affix{position:fixed;top:0px;}
 /* all links */
 
-@media screen and (max-width: 500px){
-    .bs-docs-sidebar {
-        display:none
-    }
-}
-
-.bs-docs-sidebar .nav>li>a {
-    color: #999;
-    padding: 4px 20px;
-    /*font-size: 13px;*/
-    font-weight: 400;
-
-    /*add trasnparent border */
-    border-right: 2px solid transparent;    
-}
-
-/* nested links */
-.bs-docs-sidebar .nav .nav>li>a {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 30px;
-    /*font-size: 12px;*/
-}
-
-/* active & hover links */
-.bs-docs-sidebar .nav>.active>a, 
-.bs-docs-sidebar .nav>li>a:hover, 
-.bs-docs-sidebar .nav>li>a:focus {
-    color: #563d7c;                 
-    text-decoration: none;          
-    background-color: transparent;  
-    border-right: 2px solid #563d7c; 
-}
-
-/* hide all (inactive) nested list */
-.bs-docs-sidebar .nav ul.nav {
-    display: none;           
-}
-/* show active nested list */
-.bs-docs-sidebar .nav>.active>ul.nav {
-    display: block;           
-}
 </style>
 <script>
 $(document).ready(function() {

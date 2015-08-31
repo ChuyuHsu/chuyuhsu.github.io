@@ -11,7 +11,6 @@ image:
 date: 2015-08-30T14:32:11+08:00
 ---
 
-{% include _toc.html %}
 
 # MacDown
 

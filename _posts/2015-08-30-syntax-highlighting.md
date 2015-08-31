@@ -11,7 +11,6 @@ image:
 date: 2015-08-30T23:34:10+08:00
 ---
 
-{% include _toc.html %}
 
 # GFM
 

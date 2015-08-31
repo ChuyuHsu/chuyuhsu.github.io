@@ -11,9 +11,11 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-## HTML Elements
+
+# HTML Elements
 
 Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
+
 
 # Heading 1
 
@@ -27,7 +29,7 @@ Below is just about everything you'll need to style in the theme. Check the sour
 
 ###### Heading 6
 
-### Body text
+# Body text
 
 Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
 
@@ -38,13 +40,13 @@ Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nulla
 
 HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.
 
-### Blockquotes
+# Blockquotes
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
 
-## List Types
+# List Types
 
-### Ordered Lists
+## Ordered Lists
 
 1. Item one
    1. sub item one
@@ -52,13 +54,13 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
    3. sub item three
 2. Item two
 
-### Unordered Lists
+## Unordered Lists
 
 * Item one
 * Item two
 * Item three
 
-## Tables
+# Tables
 
 | Header1 | Header2 | Header3 |
 |:--------|:-------:|--------:|
@@ -71,7 +73,7 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
 | Foot1   | Foot2   | Foot3
 {: rules="groups"}
 
-## Code Snippets
+# Code Snippets
 
 {% highlight css %}
 #container {
@@ -102,7 +104,7 @@ end
 ~~~
 	
 
-## Buttons
+# Buttons
 
 Make any link standout more when applying the `.btn` class.
 
@@ -116,7 +118,7 @@ Make any link standout more when applying the `.btn` class.
 <div markdown="0"><a href="#" class="btn btn-danger">Danger Button</a></div>
 <div markdown="0"><a href="#" class="btn btn-info">Info Button</a></div>
 
-## Notices
+# Notices
 
 **Watch out!** You can also add notices by appending `{: .notice}` to a paragraph.
 {: .notice}
