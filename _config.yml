@@ -32,7 +32,7 @@ kramdown:
 # Site owner
 owner:
   name: Chu-Yu Hsu
-  avatar: https://avatars2.githubusercontent.com/u/1912315?v=3&s=460
+  avatar: #https://avatars2.githubusercontent.com/u/1912315?v=3&s=460
   bio: "A software engineer@IBM Taiwan. An Enthusiast for machine learning, data mining and data science. Currently working on Kaggle competitions."
   email: rio512hsu@gmail.com
   disqus-shortname: chuyuhsu-github

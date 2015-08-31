@@ -1,8 +1,81 @@
-<link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.part.css">
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{{ site.url }}/assets/js/toc.min.js"></script>
+<style>
+.affix{position:fixed;top:0px;}
+/* all links */
+
+@media screen and (max-width: 500px){
+    .bs-docs-sidebar {
+        display:none
+    }
+}
+
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    padding: 4px 20px;
+    /*font-size: 13px;*/
+    font-weight: 400;
+
+    /*add trasnparent border */
+    border-right: 2px solid transparent;    
+}
+
+/* nested links */
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    /*font-size: 12px;*/
+}
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>li>a:hover, 
+.bs-docs-sidebar .nav>li>a:focus {
+    color: #563d7c;                 
+    text-decoration: none;          
+    background-color: transparent;  
+    border-right: 2px solid #563d7c; 
+}
+
+/* hide all (inactive) nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;           
+}
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;           
+}
+</style>
 <script>
 $(document).ready(function() {
-    // executes when HTML-Document is loaded and DOM is ready
-    $( "#drawer" ).find("ul").addClass( "nav nav-tabs nav-stacked" )
+	//https://github.com/ghiculescu/jekyll-table-of-contents
+    $('#toc').toc({
+    	noBackToTopLinks: true,
+    	title: '',
+    	listType: 'ul',
+    	showEffect: 'none'
+    });
+    $( "#table-of-contents" ).find("ul").addClass( "nav nav-stacked" )
+    $( "#table-of-contents > ul" ).attr( "id", "sidebar" )
+
+	$('body').scrollspy({
+	    target: '.bs-docs-sidebar',
+	    offset: 60
+	});
+
+
+	$("#table-of-contents").affix({
+	    offset: {
+	      top: function () {
+        	return (this.top = $('div.navigation-wrapper').outerHeight(true) +
+									$('div.image-wrap').outerHeight(true))
+      	  },
+	      bottom: function () {
+        	return (this.bottom = $('#comments').outerHeight(true) + $('#footer').outerHeight(true))
+      	  }
+	    }
+	});    
 });
 </script>

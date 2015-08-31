@@ -195,7 +195,7 @@ $button-size: 1.5rem;
 }
 // When JavaScript is disabled, we show the menu
 .no-js .nav ul {
-	max-height: 30em;
+	max-height: 40em;
 	overflow: hidden;
 }
 // When JavaScript is enabled, we hide the menu
@@ -203,7 +203,7 @@ $button-size: 1.5rem;
 	max-height: 0;
 	overflow: hidden;
 	@media #{$small} {
-		max-height: 30em;
+		max-height: 40em;
 	}
 }
 // Displaying the menu when the user has clicked on the button
@@ -414,6 +414,26 @@ $button-size: 1.5rem;
 	}
 }
 
+
+/* Table of content sidebar */
+.article-toc-side {
+	display: none;
+	@media #{$small} {
+		display: block;
+		@include grid(12,2);
+		@include prefix(12,0.5);
+		@include suffix(12,0.5);
+        width: 20%;
+        margin-left: 5px;
+	}
+	@media #{$large} {
+	}
+	@media #{$x-large} {
+		@include grid(12,1.5);
+		@include prefix(12,2);
+	}
+}
+
 /* Author module - mobile only */
 .article-author-bottom {
 	margin-bottom: 1em;
@@ -457,10 +477,9 @@ $button-size: 1.5rem;
 		@include grid(12,2);
 		@include prefix(12,0.5);
 		@include suffix(12,0.5);
-		position: fixed;
-		top: 7.21em;
 		right: 0;
 		background-color: $white;
+		width: 80%;
 	}
 	header {
 		background: lighten($black, 10);
