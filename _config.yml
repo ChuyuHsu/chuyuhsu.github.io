@@ -40,8 +40,8 @@ owner:
   facebook: #username
   google:
     plus: #username
-    analytics:
-    verify:
+    analytics: "UA-66940229-1"
+    verify: 
     ad-client:
     ad-slot:
   bing-verify:
