@@ -33,13 +33,23 @@
     {% include _author-bio.html %}
   </div>
   <article class="post">
-    <div class="headline-wrap">
-      {% if page.link %}
-        <h1><a href="{{ page.link }}">{{ page.title }}</a></h1>
-      {% else %}
-        <h1><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
-      {% endif %}
-    </div><!--/ .headline-wrap -->
+    <header class="header-title">
+      <div class="header-title-wrap">
+        {% if page.link %}
+          <h1 class="entry-title"><i class="fa fa-bookmark permalink"></i> <a href="{{ page.link }}">{{ page.title }}</a></h1>
+        {% else %}
+          <h1 class="entry-title"><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}">{{ page.title }}</a></h1>
+        {% endif %}
+        <h2><span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></span></h2>
+        {% if site.reading_time %}
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          {% assign readtime = content | number_of_words | divided_by:site.words_per_minute %}
+          Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
+        </p><!-- /.entry-reading-time -->
+        {% endif %}
+      </div><!-- /.header-title-wrap -->
+    </header>
     <div class="article-wrap">
       {{ content }}
       <hr />
@@ -48,9 +58,10 @@
         <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
       </footer>
     </div><!-- /.article-wrap -->
-  {% if site.owner.disqus-shortname and page.comments == true %}
-    <section id="disqus_thread"></section><!-- /#disqus_thread -->
-  {% endif %}
+    {% if site.owner.disqus-shortname and page.comments == true %}
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+    {% if site.related_posts.size > 0 %}{% include _read-more.html %}{% endif %}
   </article>
   <div class="article-toc-side">
     {% include _toc.html %}
@@ -58,17 +69,6 @@
 </div><!-- /#main -->
 
 <div class="footer-wrap">
-  {% if site.related_posts.size > 0 %}
-  <div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.url }}/posts/">View all posts</a>)</small></h4>
-    <ul>
-    {% for post in site.related_posts limit:3 %}
-      <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->
-  {% endif %}
   <footer>
     {% include _footer.html %}
   </footer>
