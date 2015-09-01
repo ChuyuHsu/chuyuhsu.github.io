@@ -2,8 +2,8 @@
 layout: post
 title: Macdown Readme
 modified:
-categories: 
-excerpt:
+categories: test
+excerpt: "just for testing"
 tags: []
 comments: true
 image:

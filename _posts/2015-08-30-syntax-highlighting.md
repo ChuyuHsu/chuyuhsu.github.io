@@ -2,8 +2,8 @@
 layout: post
 title: Syntax-highlighting
 modified:
-categories: 
-excerpt:
+categories: test
+excerpt: "just for testing"
 comments: true
 tags: []
 image:

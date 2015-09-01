@@ -251,6 +251,12 @@ header .entry-meta {
 		text-align: center;
 	}
 }
+
+.category-entry-title {
+	margin: 0px;
+
+}
+
 .entry-tags {
 	display: block;
 	margin-bottom: 6px;
@@ -845,7 +851,7 @@ $button-size: 1.5rem;
 		@include grid(12,2);
 		@include prefix(12,0.5);
 		@include suffix(12,0.5);
-        width: 20%;
+        width: 18%;
         margin-left: 5px;
 	}
 	@media #{$large} {
@@ -969,6 +975,7 @@ $button-size: 1.5rem;
 		@include font-rem(24);
 		font-family: $heading-font;
 		list-style-type: none;
+		text-transform: uppercase;
 		ul.nav {
     		display: none;           
 		}

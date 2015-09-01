@@ -35,6 +35,11 @@
   <div id="index" class="content-wrap">
     {{ content }}
   </div><!-- /#index -->
+  {% if page.show_toc %}
+    <div class="article-toc-side">
+      {% include _toc.html %}
+    </div>  
+  {% endif %}
 </div><!-- /#main -->
 
 <div class="footer-wrap">
@@ -44,6 +49,8 @@
 </div><!-- /.footer-wrap -->
 
 {% include _scripts.html %}
-
+{% if page.show_toc %}
+  {% include _scrollspy.html %}
+{% endif %}  
 </body>
 </html>

@@ -1,0 +1,32 @@
+---
+layout: post-index
+title: Categories
+show_toc: true
+excerpt: "Posts by Category"
+---
+
+<h2>{{ page.title }}</h2>
+{% for category in site.categories %}  
+  <article class="hentry">
+  <header>
+      <h1 id="{{ category | first }}" class="all-caps entry-title">{{ category | first }}</h1>
+  </header>
+  <hr></hr>
+    {% for posts in category %}
+      {% for post in posts %}
+        <div class="entry-content">
+          <header>           
+            {% if post.link %}
+              <h2 class="category-entry-title"><a href="{{ site.url }}{{ post.url }}" class="permalink" rel="bookmark" title="{{ post.title }}"><i class="fa fa-bookmark"></i></a> <a href="{{ post.link }}">{{ post.title }}</a></h2>
+            {% else %}
+              <h2 class="category-entry-title"><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">{{ post.title }}</a></h2>
+            {% endif %}
+            <div class="entry-meta">
+              <span class="entry-date date published updated"><time datetime="{{ post.date }}"><a href="{{ site.url }}{{ post.url }}">{{ post.date | date: "%B %d, %Y"}}</a></time></span>
+            </div><!-- /.entry-meta -->             
+          </header>
+        </div><!-- /.entry-content -->
+      {% endfor %}
+    {% endfor %}
+  </article>
+{% endfor %}
