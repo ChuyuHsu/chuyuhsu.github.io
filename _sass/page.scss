@@ -18,7 +18,7 @@ body {
 	}
 }
 .entry-content {
-	@include font-size(16);
+	@include font-size(20);
 	// Dotted line underlines for links
 	p > a,
 	li > a {
@@ -891,6 +891,11 @@ $button-size: 1.5rem;
 /* Post content wrapper */
 .article-wrap {
 	// Dotted line underlines for links
+	p {
+		@media #{$small}{
+			@include font-size(20);
+		}
+	}
 	p > a,
 	li > a {
 		text-decoration: underline;
