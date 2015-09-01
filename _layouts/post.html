@@ -63,9 +63,11 @@
     {% endif %}
     {% if site.related_posts.size > 0 %}{% include _read-more.html %}{% endif %}
   </article>
-  <div class="article-toc-side">
-    {% include _toc.html %}
-  </div>  
+  {% if page.use_toc %}
+    <div class="article-toc-side">
+      {% include _toc.html %}
+    </div>  
+  {% endif %}
 </div><!-- /#main -->
 
 <div class="footer-wrap">
