@@ -13,7 +13,7 @@ About Chu-Yu Hsu, 許儲羽
 
 Hi, I'm Chu-Yu, a 27-year-old ambitious boy born in Taiwan, looking for the purpose of life meaning lately. Recently want to live as a digial nomad travelling around the world and doing great job meanwhile. Day to day, I work as a Software-Developer-and-Data-Sciencist hybrid.
 
-I love stuff like Artificial Intelligence and Machine Learning, and totally can watch AIs playing 2048 or chess whole day long. Currently, I work on Natural Language Process systems, recommendation systems and knowledge management systems as my job, learn Apache Spark, do Kaggle competitions, and taking MOOCs when there is spare time. 
+I love stuff like Artificial Intelligence, machine learning, philosophy and science of cooking. Totally can watch AIs playing 2048 or chess whole day long. Currently, I work on Natural Language Process systems, recommendation systems and knowledge management systems as my job, learn Apache Spark, do Kaggle competitions, and taking MOOCs when there is spare time. 
 
 
 
