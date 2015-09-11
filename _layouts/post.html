@@ -34,7 +34,7 @@
   </div>
   <article class="post">
     <header class="header-title">
-      <div class="header-title-wrap">
+      <div class="header-title-wrap entry-meta">
         {% if page.link %}
           <h1 class="entry-title"><i class="fa fa-bookmark permalink"></i> <a href="{{ page.link }}">{{ page.title }}</a></h1>
         {% else %}
@@ -48,6 +48,15 @@
           Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
         </p><!-- /.entry-reading-time -->
         {% endif %}
+        <span class="entry-tags">
+          <i class="fa fa-tags"></i>
+            {% for tag in page.tags %} 
+              <a href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" class="tag">
+                <i class="fa fa-tag"></i>
+                {{ tag }}
+              </a>
+            {% unless forloop.last %}{% endunless %}{% endfor %}
+        </span>     
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="article-wrap">
@@ -57,7 +66,10 @@
         {% if page.share != false %}{% include _social-share.html %}{% endif %}
         <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
       </footer>
-    </div><!-- /.article-wrap -->
+    </div><!-- /.article-wrap -->  
+    <div class="article-author-bottom">
+    {% include _author-bio.html %}
+    </div>  
     {% if site.owner.disqus-shortname and page.comments == true %}
       <section id="disqus_thread"></section><!-- /#disqus_thread -->
     {% endif %}
