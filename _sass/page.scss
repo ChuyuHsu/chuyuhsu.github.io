@@ -388,7 +388,7 @@ header .entry-meta {
 // --------------------------------------------------
 #post-index {
 	#main {
-		margin: 20px 2px 20px 2px;
+		margin: 0px 2px 20px 2px;
 		@media #{$medium} {
 			margin-left: 20px;
 			margin-right: 20px;
@@ -663,10 +663,15 @@ $button-size: 1.5rem;
 		@include suffix(12,1);
 		margin-bottom: 2em;
 		@media #{$small} {
-			@include grid(12,6);
+			@include grid(12,8);
 			@include prefix(12,0);
 			@include suffix(12,0);
 		}
+		@media #{$large} {
+			@include grid(12,6);
+			@include prefix(12,0);
+			@include suffix(12,0);
+		}		
 		@media #{$x-large} {
 			@include grid(12,4.5);
 		}
@@ -676,17 +681,22 @@ $button-size: 1.5rem;
 /* Index listing specific styling */
 #index {
 	@include container;
-	@include grid(12,10);
-	@include prefix(12,1);
-	@include suffix(12,1);
+	@include grid(12,12);
+	@include prefix(12,0);
+	@include suffix(12,0);
 	margin-bottom: 2em;
 	@media #{$small} {
-		@include grid(12,6);
+		@include grid(12,8);
 		@include prefix(12,0);
 		@include suffix(12,0);
 	}
+	@media #{$large} {
+		@include grid(12,6);
+		@include prefix(12,0);
+		@include suffix(12,0);		
+	}	
 	@media #{$x-large} {
-		@include grid(12,4.5);
+		@include grid(12,4.5);	
 	}
 	h3 {
 		margin: 0;
@@ -851,7 +861,6 @@ $button-size: 1.5rem;
 		@include grid(12,2);
 		@include prefix(12,0.5);
 		@include suffix(12,0.5);
-        width: 18%;
         margin-left: 5px;
 	}
 	@media #{$large} {
