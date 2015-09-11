@@ -45,7 +45,7 @@ body {
 }
 .header-title {
 	text-align: center;
-	margin: 30px 0 0;
+	margin: 30px 0 30px;
 	h1 {
 		margin: 10px 20px;
 		font-weight: 700;
@@ -171,9 +171,6 @@ body {
 	@include font-rem(12);
 	text-transform: uppercase;
 	color: lighten($basecolor,60);
-	a {
-		color: lighten($basecolor,60);
-	}
 	.vcard {
 		&:before {
 			content: " by ";
@@ -259,7 +256,26 @@ header .entry-meta {
 
 .entry-tags {
 	display: block;
-	margin-bottom: 6px;
+	text-align: left;
+	margin-bottom: 10px;
+	.tag {
+	display: inline-block;
+	margin: 4px;
+	color: $white;
+	@include rounded(3px);
+	background-color: lighten($basecolor,50);
+	span {
+		float: left;
+		padding: 2px 6px;
+	}
+	.count {
+		background-color: lighten($basecolor,40);
+		@include border-radius(3px,3px,0,0);
+	}
+	&:hover {
+		background-color: lighten($basecolor,40);
+	}
+}
 }
 .tag-heading,
 .year-heading {
@@ -388,11 +404,8 @@ header .entry-meta {
 // --------------------------------------------------
 #post-index {
 	#main {
-		margin: 20px 2px 20px 2px;
-		@media #{$medium} {
-			margin-left: 20px;
-			margin-right: 20px;
-		}
+		margin: 0px 2px 20px 2px;
+
 		@media #{$large} {
 			margin-top: 20px;
 			margin-left: auto;
@@ -663,10 +676,15 @@ $button-size: 1.5rem;
 		@include suffix(12,1);
 		margin-bottom: 2em;
 		@media #{$small} {
+			@include grid(12,8);
+			@include prefix(12,2);
+			@include suffix(12,2);
+		}
+		@media #{$large} {
 			@include grid(12,6);
 			@include prefix(12,0);
 			@include suffix(12,0);
-		}
+		}		
 		@media #{$x-large} {
 			@include grid(12,4.5);
 		}
@@ -676,17 +694,22 @@ $button-size: 1.5rem;
 /* Index listing specific styling */
 #index {
 	@include container;
-	@include grid(12,10);
-	@include prefix(12,1);
-	@include suffix(12,1);
+	@include grid(12,12);
+	@include prefix(12,0);
+	@include suffix(12,0);
 	margin-bottom: 2em;
 	@media #{$small} {
+		@include grid(12,10);
+		@include prefix(12,1);
+		@include suffix(12,1);
+	}
+	@media #{$large} {
 		@include grid(12,6);
 		@include prefix(12,0);
-		@include suffix(12,0);
-	}
+		@include suffix(12,0);		
+	}	
 	@media #{$x-large} {
-		@include grid(12,4.5);
+		@include grid(12,4.5);	
 	}
 	h3 {
 		margin: 0;
@@ -806,7 +829,7 @@ $button-size: 1.5rem;
 		max-width: 110px;
 		@include rounded(150px);
 	}
-	@media #{$small} {
+	@media #{$large} {
 		display: block;
 		@include grid(12,2);
 		@include prefix(12,0.5);
@@ -851,7 +874,6 @@ $button-size: 1.5rem;
 		@include grid(12,2);
 		@include prefix(12,0.5);
 		@include suffix(12,0.5);
-        width: 18%;
         margin-left: 5px;
 	}
 	@media #{$large} {
@@ -865,7 +887,7 @@ $button-size: 1.5rem;
 /* Author module - mobile only */
 .article-author-bottom {
 	margin-bottom: 1em;
-	@media #{$small} {
+	@media #{$large} {
 		display: none;
 	}
 	.bio-photo {
